@@ -82,6 +82,8 @@ class Widget(Paymentwall):
                     params['prices[' + str(index) + ']'] = product.get_amount()
                 if product.get_currency_code() != '' and product.get_currency_code() is not None:
                     params['currencies[' + str(index) + ']'] = product.get_currency_code()
+                if product.get_name() != '' and product.get_name() is not None:
+                    params['names[' + str(index) + ']'] = product.get_name()
                 index += 1
 
         params['sign_version'] = signature_version = str(self.get_default_widget_signature())
