@@ -9,9 +9,10 @@ def read(fname):
 
 setup(
     name='paymentwall-python',
-    version='1.0.8',
+    version='2.0.0',
     packages=['paymentwall'],
-    url='https://github.com/paymentwall/paymentwall-python',
+    install_requires=['certifi==2023.07.22'],
+    url='https://github.com/pw-sdk-test/paymentwall-python',
     description='Paymentwall Python Library',
     long_description=read('pypi_description.rst'),
     license='MIT',

@@ -3,7 +3,7 @@ import hashlib
 
 class Paymentwall:
 
-    VERSION = '1.0.0'
+    VERSION = '2.0.0'
 
     API_VC = 1
     API_GOODS = 2
@@ -17,6 +17,13 @@ class Paymentwall:
     SIGNATURE_VERSION_1 = 1
     SIGNATURE_VERSION_2 = 2
     SIGNATURE_VERSION_3 = 3
+
+    BRICK_ONETIMETOKEN_TEST_BASE_URL = 'pwgateway.com'
+    BRICK_ONETIMETOKEN_TEST_PATH = '/api/token'
+    BRICK_BASE_URL = 'api.paymentwall.com'
+    BRICK_ONETIMETOKEN_PATH = '/api/brick/token'
+    BRICK_CHARGE_PATH = '/api/brick/charge'
+    BRICK_SUBSCRIPTION_CHARGE_PATH = '/api/brick/subscription'
 
     errors = []
 
