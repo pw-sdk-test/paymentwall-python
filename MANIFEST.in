@@ -1,2 +1,2 @@
-include *.rst LICENSE *.md
-recursive-include paymentwall/response *.py
+include *.rst LICENSE *.md *.in
+recursive-include paymentwall/response/*.py *.py LICENSE
