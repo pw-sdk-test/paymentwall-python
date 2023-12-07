@@ -37,13 +37,13 @@ class Charge(ApiObject):
         additional_path = ''
 
         if operation_type == 'detail':
-            additional_path = f'/{charge_id}'
+            additional_path = '/{}'.format(charge_id)
         elif operation_type == 'refund':
-            additional_path = f'/{charge_id}/refund'
+            additional_path = '/{}/refund'.format(charge_id)
         elif operation_type == 'capture':
-            additional_path = f'/{charge_id}/capture'
+            additional_path = '/{}/capture'.format(charge_id)
         elif operation_type == 'void':
-            additional_path = f'/{charge_id}/void'
+            additional_path = '/{}/void'.format(charge_id)
         else:
             print('Parameter error in charge.other_operation')
 
