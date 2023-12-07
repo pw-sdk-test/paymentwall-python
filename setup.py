@@ -11,7 +11,7 @@ setup(
     name='paymentwall-python',
     version='2.0.0',
     packages=['paymentwall'],
-    install_requires=['certifi==2023.07.22'],
+    install_requires=['certifi==2021.10.8'],
     url='https://github.com/pw-sdk-test/paymentwall-python',
     description='Paymentwall Python Library',
     long_description=read('pypi_description.rst'),
