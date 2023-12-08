@@ -48,9 +48,9 @@ class Subscription(ApiObject):
         additional_path = ''
 
         if operation_type == 'detail':
-            additional_path = f'/{subscription_id}'
+            additional_path = '/{}'.format(subscription_id)
         elif operation_type == 'cancel':
-            additional_path = f'/{subscription_id}/cancel'
+            additional_path = '/{}/cancel'.format(subscription_id)
         else:
             print('Parameter error in subscription.other_operation')
 
