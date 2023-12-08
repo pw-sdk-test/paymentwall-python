@@ -1,7 +1,10 @@
 from .api_object import ApiObject
 from .card import Card
 from .http_action import HttpAction
-from urllib.parse import urlencode
+try: 
+    from urllib.parse import urlencode
+except ImportError:
+    from urllib import urlencode
 
 class Onetimetoken(ApiObject):
     def __init__(self, number=None, exp_month=None, exp_year=None, cvv=None):
