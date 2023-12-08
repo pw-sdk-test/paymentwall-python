@@ -1,6 +1,9 @@
 from .http_action import HttpAction
 from .api_object import ApiObject
-from urllib.parse import urlencode
+try: 
+    from urllib.parse import urlencode
+except ImportError:
+    from urllib import urlencode
 
 class Subscription(ApiObject):
     def __init__(self, amount=None, currency='USD', description=None, email=None, fingerprint=None, token=None, period=None, period_duration=None, trial_data=None, extra=None):
