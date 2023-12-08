@@ -1,3 +1,3 @@
 class Err: 
-	def get_parameter(parameter, json_chunk):
+	def get_parameter(self, parameter, json_chunk):
 	    return json_chunk.get(parameter)
