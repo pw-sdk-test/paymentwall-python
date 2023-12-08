@@ -11,10 +11,14 @@ from .onetimetoken import Onetimetoken
 from .http_action import HttpAction
 from .subscription import Subscription
 
-from .response.abstract import CallbackRes
-from .response.err import Err
-from .response.success import Success
-
+try:
+    from .response.abstract import CallbackRes
+    from .response.err import Err
+    from .response.success import Success
+except ImportError:
+    from response.abstract import CallbackRes
+    from response.err import Err
+    from response.success import Success
 
 __all__ = ['Paymentwall', 'Pingback', 'Product', 'Widget', 'Card', 'ApiObject', 'Charge', 
            'Onetimetoken', 'HttpAction', 'Subscription', 'CallbackRes', 'Err', 'Success']
