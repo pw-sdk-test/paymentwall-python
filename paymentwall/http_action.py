@@ -1,6 +1,14 @@
 import json
-import http.client as httplib
-from .response.abstract import CallbackRes
+
+try: 
+    import http.client as httplib
+except ImportError:
+    import httplib
+
+try: 
+    from .response.abstract import CallbackRes
+except ImportError:
+    from response.abstract import CallbackRes
 
 import ssl
 import certifi
